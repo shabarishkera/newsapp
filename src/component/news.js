@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Newsitem from './newsitem'
 
-  
+  import url from './apikey'
  
 
 export default class news extends Component {
@@ -32,7 +32,6 @@ export default class news extends Component {
   }
    async componentDidMount()
   {
-    let url="https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=44e64c5f16f24e5db2dbb6ec66047e60"
     let data=await fetch(url);
     let jsondata=await data.json();
     this.setState({articles:jsondata.articles})
