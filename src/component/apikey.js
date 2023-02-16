@@ -1,4 +1,4 @@
 import React from 'react'
-  let url="your api key";
-
+//your key here
+var url;
 export default url;
