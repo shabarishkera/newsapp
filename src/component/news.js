@@ -29,18 +29,20 @@ export default class news extends Component {
     let jsondata=await data.json();
     
     this.setState({articles:jsondata.articles,page:this.state.page+1})
+    console.log("lenth of article"+this.state.articles.length);
     if(this.state.articles.length<20)
-   document.documentElementById("nextbtn").disabled=true;
-   
+    {
+   document.getElementById("nextbtn").disabled=true;
+    }
   }
   handleprev= async()=>{
     document.documentElement.scrollTop=0;
-    let data=await fetch(url+"&page="+(this.state.page+1)+"&pagesize=20");
+    let data=await fetch(url+"&page="+(this.state.page-1)+"&pagesize=20");
     let jsondata=await data.json();
     this.setState()
     this.setState({page:this.state.page-1,articles:jsondata.articles});
-    if(document.documentElementById("nextbtn").disabled==true)
-    document.documentElementById("nextbtn").disabled=false;
+    if(document.getElementById("nextbtn").disabled==true)
+    document.getElementById("nextbtn").disabled=false;
   }
    movetop=()=>{
    document.documentElement.scrollTop=0;
