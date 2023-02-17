@@ -3,7 +3,7 @@ import Newsitem from './newsitem'
 
   import url from './apikey'
  
-
+import Spinner  from './spinner'
 
 export default class news extends Component {
 
@@ -26,10 +26,12 @@ export default class news extends Component {
   
     document.documentElement.scrollTop=0;
     let data=await fetch(url+"&page="+(this.state.page+1)+"&pagesize=20");
+    this.setState({loading:true});
     let jsondata=await data.json();
     
     this.setState({articles:jsondata.articles,page:this.state.page+1})
     console.log("lenth of article"+this.state.articles.length);
+    this.setState({loading:false});
     if(this.state.articles.length<20)
     {
    document.getElementById("nextbtn").disabled=true;
@@ -37,9 +39,10 @@ export default class news extends Component {
   }
   handleprev= async()=>{
     document.documentElement.scrollTop=0;
+    this.setState({loading:true});
     let data=await fetch(url+"&page="+(this.state.page-1)+"&pagesize=20");
     let jsondata=await data.json();
-    this.setState()
+    this.setState({loading:false});
     this.setState({page:this.state.page-1,articles:jsondata.articles});
     if(document.getElementById("nextbtn").disabled==true)
     document.getElementById("nextbtn").disabled=false;
@@ -51,9 +54,10 @@ export default class news extends Component {
      }
 
    async componentDidMount()
-  {
+  {   this.setState({loading:true})
     let data=await fetch(url);
     let jsondata=await data.json();
+    this.setState({loading:false})
     this.setState({articles:jsondata.articles})
   }
   render() {
@@ -64,8 +68,9 @@ export default class news extends Component {
   <div className="headding mx-3 my-3"><h2> #<span>D</span>aily news</h2></div>
   <hr/>
   <hr/>
+  {this.state.loading?<Spinner />:null}
         <div className='row'>
-          {this.state.articles.map((element)=>{
+          {!this.state.loading&&this.state.articles.map((element)=>{
            return <div  key={element.url} className='col-md-3'>
             <Newsitem title={element.title?element.title.slice(0,40):""} desc={element.description?element.description.slice(0,90):""} src={element.urlToImage?element.urlToImage:this.defaulturl} newsurl={element.url}/>
               </div>
