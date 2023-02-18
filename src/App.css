@@ -36,4 +36,24 @@
     transform: rotate(360deg);
   }
 }
+.footer
+{
+animation-name: myanime;
+animation-duration: 6s;
+animation-delay: 0s;
+animation-timing-function:ease-in-out;
+animation-iteration-count: infinite;
+padding:1.2rem;
+}
+@keyframes myanime {
+  0%{border:2px black solid;
+    outline: 5px black;
+  }
+  10%{border:1.9px black solid}
+  30%{border:1.7px black solid}
+  60%{border:1.5px black solid}
+  80%{border:1.3px black solid}
+  90%{border:1.2px black solid}
+  100%{border:1.2px black solid}
 
+}

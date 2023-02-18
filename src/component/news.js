@@ -78,7 +78,7 @@ export default class news extends Component {
         
         </div>
         <hr/>
-        <div className="d-flex justify-content-center">.
+        <div className="d-flex justify-content-center footer">.
         <button type="button" align="left" disabled={this.state.page<=1} className="btn btn-primary " onClick={this.handleprev}> &larr; previous </button>
         <button type="button"  align="right" className="btn btn-primary mx-4 " onClick={this.movetop}>back to top</button>
         <button type="button" id="nextbtn" align="right" className="btn btn-primary " onClick={this.handlenext}>next &rarr; </button>
