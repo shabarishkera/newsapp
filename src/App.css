@@ -44,16 +44,18 @@ animation-delay: 0s;
 animation-timing-function:ease-in-out;
 animation-iteration-count: infinite;
 padding:1.2rem;
+transition:  border ease-in-out 1s 2s;
+border: 2px black;
 }
 @keyframes myanime {
-  0%{border:2px black solid;
-    outline: 5px black;
+  0%{border: black solid;
+  
   }
-  10%{border:1.9px black solid}
-  30%{border:1.7px black solid}
-  60%{border:1.5px black solid}
-  80%{border:1.3px black solid}
-  90%{border:1.2px black solid}
-  100%{border:1.2px black solid}
+  10%{border: black solid}
+  30%{border:  blue solid}
+  60%{border: orange solid}
+  80%{border: red solid}
+  90%{border: yellow solid}
+  100%{border: black solid}
 
 }
