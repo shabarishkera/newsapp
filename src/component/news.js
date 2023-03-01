@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Newsitem from './newsitem'
-
+import defaultimage from '../defualtimage.png'
   import url from './apikey'
  
 import Spinner  from './spinner'
@@ -8,7 +8,7 @@ import Spinner  from './spinner'
 export default class news extends Component {
 
 
-   defaulturl="https://editorial.fxstreet.com/images/Markets/Commodities/Metals/Gold/raw-gold-55156544_Large.jpg"
+   defaulturl=defaultimage;
   constructor()
   {
     super();
