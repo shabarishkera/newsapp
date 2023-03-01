@@ -1,4 +1,3 @@
-import React from 'react'
 
 export default function Navbar() {
   return (
@@ -17,10 +16,14 @@ export default function Navbar() {
         <li className="nav-item">
           <a className="nav-link" href="#">Link</a>
         </li>
-        
-          
+        <li className="nav-item" id="assisttoggle">
+       
+<div className="custom-control custom-switch  nav-link">
+  <input type="checkbox" className="custom-control-input"  id="toggle"/>
+  <label className="custom-control-label" >Disable assist</label>
+</div>
+        </li>  
       </ul>
-      
     </div>
   </div>
 </nav>

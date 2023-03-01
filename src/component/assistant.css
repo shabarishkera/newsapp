@@ -1,0 +1,31 @@
+
+.container
+{
+height: 70px ;
+width: 70px;
+display:flex;
+justify-content: center;
+align-items: center;
+position:relative;
+top:2rem;
+border-radius: 1.4rem;
+}
+.innerelem
+{
+  height: 50px ;
+  width: 50px;
+  background-image:url("./bot.png");
+  background-size: cover;
+  border-radius: 1rem;
+}
+.container:focus,.innerelem:active
+{
+border: 1px white solid;
+}
+.innerelem::after,.innerelem:focus
+{
+  border: white 2px solid;
+
+}
+
+

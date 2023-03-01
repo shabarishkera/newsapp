@@ -38,7 +38,7 @@
 }
 .footer
 {
-animation-name: myanime;
+/*animation-name: myanime;  */
 animation-duration: 6s;
 animation-delay: 0s;
 animation-timing-function:ease-in-out;
@@ -71,3 +71,35 @@ add some transiton to the spinner ..
 */
 
 }
+
+.container-assist
+{
+height: 70px ;
+width: 70px;
+display: inline-flex;
+justify-content: center;
+align-items: center;
+position: fixed;
+top:50px;
+border-radius: 1.4rem;
+
+}
+.innerelem
+{
+  height: 50px ;
+  width: 50px;
+  background-image:url("bot.png");
+  background-size: cover;
+  border-radius: 1rem;
+}
+.container:focus,.innerelem:active
+{
+border: 1px white solid;
+}
+.innerelem::after,.innerelem:focus
+{
+  border: white 2px solid;
+
+}
+
+

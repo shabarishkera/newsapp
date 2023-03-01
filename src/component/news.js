@@ -4,7 +4,7 @@ import defaultimage from '../defualtimage.png'
   import url from './apikey'
  
 import Spinner  from './spinner'
-
+import Assistant  from './assistant'
 export default class news extends Component {
 
 
@@ -76,6 +76,7 @@ export default class news extends Component {
   <hr/>
   <hr/>
   {this.state.loading?<Spinner />:null}
+  
         <div className='row'>
           {!this.state.loading&&this.state.articles.map((element)=>{
            return <div  key={element.url} className='col-md-3'>
