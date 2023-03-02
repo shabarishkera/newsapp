@@ -1,23 +1,30 @@
 import React, { Component } from 'react'
 import Newsitem from './newsitem'
 import defaultimage from '../defualtimage.png'
-  import url from './apikey'
- 
+  //import url from './apikey'
+ import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 import Spinner  from './spinner'
 import Assistant  from './assistant'
 export default class news extends Component {
 
 
    defaulturl=defaultimage;
-  constructor()
+  constructor(props)
   {
+
     super();
+
     this.state={ 
       articles:[],
     loading:false,
   page:1,
   pagesize:20,
-  
+  url:props.url
   }
 
 
@@ -25,7 +32,7 @@ export default class news extends Component {
   handlenext= async ()=>{
   
     document.documentElement.scrollTop=0;
-    let data=await fetch(url+"&page="+(this.state.page+1)+"&pagesize=20");
+    let data=await fetch(this.state.url+"&page="+(this.state.page+1)+"&pagesize=20");
     this.setState({loading:true});
     let jsondata=await data.json();
     
@@ -40,7 +47,7 @@ export default class news extends Component {
   handleprev= async()=>{
     document.documentElement.scrollTop=0;
     this.setState({loading:true});
-    let data=await fetch(url+"&page="+(this.state.page-1)+"&pagesize=20");
+    let data=await fetch(this.state.url+"&page="+(this.state.page-1)+"&pagesize=20");
     let jsondata=await data.json();
     this.setState({loading:false});
     this.setState({page:this.state.page-1,articles:jsondata.articles});
@@ -55,10 +62,12 @@ export default class news extends Component {
 
    async componentDidMount()
   {   this.setState({loading:true})
-    let data=await fetch(url);
+    let data=await fetch(this.state.url);
+    console.log(data)
     let jsondata=await data.json();
     this.setState({loading:false})
     this.setState({articles:jsondata.articles})
+    
   }
   render() {
 
