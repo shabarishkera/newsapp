@@ -1,9 +1,7 @@
-import React, { Component } from 'react'
-import Newsitem from './newsitem'
-import defaultimage from '../defualtimage.png'
- 
-
-import Spinner  from './spinner'
+import React, { Component } from 'react';
+import Newsitem from './newsitem';
+import defaultimage from '../defualtimage.png';
+ import Spinner  from './spinner';
 export default class news extends Component {
 
 
@@ -79,7 +77,7 @@ export default class news extends Component {
   <hr/>
   {this.state.loading?<Spinner />:null}
   
-        <div className='row'>
+       <div className='row'>
           {!this.state.loading&&this.state.articles.map((element)=>{
            return <div  key={element.url} className='col-md-3'>
             <Newsitem title={element.title?element.title.slice(0,40):""} desc={element.description?element.description.slice(0,90):""} src={element.urlToImage?element.urlToImage:this.defaulturl} newsurl={element.url}/>

@@ -1,10 +1,11 @@
 import {Link} from 'react-router-dom';
+import Assistant from './assistant'
 export default function Navbar() {
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
   <div className="container-fluid">
-    {/* <Link className="navbar-brand" to="/">Navbar</ Link > */}
+    <Link className="navbar-brand" to="/">Categories</ Link > 
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
@@ -19,18 +20,24 @@ export default function Navbar() {
         <li className="nav-item">
           <Link className="nav-link" to="tech">Tech</ Link >
         </li>
-        {/* <li className="nav-item">
+         <li className="nav-item">
           <Link className="nav-link" to="entatainment">Entainment</ Link >
-        </li> */}
+        </li> 
+        <li className="nav-item">
+          <Link className="nav-link" to="health">Health</ Link >
+        </li> 
+
          <li className="nav-item">
           <Link className="nav-link" to="buisness">Buisness</ Link >
         </li>
         <li className="nav-item" id="assisttoggle">
-       
+{/*        
 <div className="custom-control custom-switch  nav-link">
   <input type="checkbox" className="custom-control-input"  id="toggle"/>
   <label className="custom-control-label" >Disable assist</label>
-</div>
+</div> */}
+
+   
         </li>  
       </ul>
     </div>
