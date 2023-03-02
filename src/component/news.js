@@ -1,15 +1,9 @@
 import React, { Component } from 'react'
 import Newsitem from './newsitem'
 import defaultimage from '../defualtimage.png'
-  //import url from './apikey'
- import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+ 
+
 import Spinner  from './spinner'
-import Assistant  from './assistant'
 export default class news extends Component {
 
 
@@ -63,8 +57,7 @@ export default class news extends Component {
    async componentDidMount()
   {   this.setState({loading:true})
     let data=await fetch(this.state.url);
-    console.log(data)
-    let jsondata=await data.json();
+      let jsondata=await data.json();
     this.setState({loading:false})
     this.setState({articles:jsondata.articles})
     
