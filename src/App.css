@@ -63,13 +63,6 @@ border-radius: .5rem;
 .spinner
 {
 
-
-/*
-add some transiton to the spinner ..
-
-
-*/
-
 }
 
 .container-assist
@@ -103,3 +96,8 @@ border: 1px white solid;
 }
 
 
+.top_section
+{
+display: flex;
+align-items: center;
+}
