@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Newsitem from './newsitem';
 import defaultimage from '../defualtimage.png';
  import Spinner  from './spinner';
+import { json } from 'react-router-dom';
 export default class news extends Component {
 
 
@@ -27,7 +28,8 @@ export default class news extends Component {
     let data=await fetch(this.state.url+"&page="+(this.state.page+1)+"&pagesize=20");
     this.setState({loading:true});
     let jsondata=await data.json();
-    
+    if(jsondata.articles==undefined)
+    return;
     this.setState({articles:jsondata.articles,page:this.state.page+1})
     console.log("lenth of article"+this.state.articles.length);
     this.setState({loading:false});
