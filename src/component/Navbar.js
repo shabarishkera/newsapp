@@ -1,7 +1,7 @@
 import {Link} from 'react-router-dom';
 import Assistant from './assistant'
 export default function Navbar() {
-  sessionStorage.clear();
+ 
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -22,13 +22,13 @@ export default function Navbar() {
           <Link className="nav-link" to="tech">Tech</ Link >
         </li>
          <li className="nav-item">
-          <Link className="nav-link" to="entatainment">Entainment</ Link >
+          <Link className="nav-link" to="entatainment">Entertainment</ Link >
         </li>
         <li className="nav-item">
           <Link className="nav-link" to="health">Health</ Link >
         </li> 
          <li className="nav-item">
-          <Link className="nav-link" to="buisness">Buisness</ Link >
+          <Link className="nav-link" to="buisness">Business</ Link >
         </li>
         <li className="nav-item">
           <Link className="nav-link" to="archive">Archived</ Link >
