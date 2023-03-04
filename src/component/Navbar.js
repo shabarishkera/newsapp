@@ -1,6 +1,7 @@
 import {Link} from 'react-router-dom';
 import Assistant from './assistant'
 export default function Navbar() {
+  sessionStorage.clear();
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -22,14 +23,16 @@ export default function Navbar() {
         </li>
          <li className="nav-item">
           <Link className="nav-link" to="entatainment">Entainment</ Link >
-        </li> 
+        </li>
         <li className="nav-item">
           <Link className="nav-link" to="health">Health</ Link >
         </li> 
-
          <li className="nav-item">
           <Link className="nav-link" to="buisness">Buisness</ Link >
         </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="archive">Archived</ Link >
+        </li> 
         <li className="nav-item" id="assisttoggle">
 {/*        
 <div className="custom-control custom-switch  nav-link">
