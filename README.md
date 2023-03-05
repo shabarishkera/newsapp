@@ -2,8 +2,8 @@
 this is a simple news website that uses newsapi to fetch latest news to user .
 this is a test project build as part of learning react 
 
-## reference: ' codewithharry '
-
+### 
+### reference: `codewithharry`
 
 ## TO RUN .
 
