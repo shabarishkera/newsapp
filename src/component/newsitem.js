@@ -19,9 +19,9 @@ window.sessionStorage.setItem(number,data);
         <p className="card-text">{desc}...</p>
         <div className='d-flex justify-content-center'>
         <a href={newsurl} target='_blank' className="btn btn-primary">READ</a>
-        <button type="button" className="btn btn-primary mx-2 archiveclass"  onClick={()=>{ 
+        <button type="button" className="btn btn-primary mx-2 archiveclass"  onClick={(event)=>{ 
           var number=sessionStorage.length;
-         
+          event.target.style.display="none";     
 window.sessionStorage.setItem(number,JSON.stringify(this.props)); }}>Archive</button>
         </div>
       </div>
