@@ -31,13 +31,20 @@ Your app is ready to be deployed!
  `API KEY IS HIDDEN -- TO RUN USE YOUR OWN API KEY `-
 
  url format 
+ 
  `
- tech:"https://newsapi.org/v2/everything?q=tech&apiKey={your api key}",
- health:"https://newsapi.org/v2/everything?q=health&apiKey={your api key}",
- general:"https://newsapi.org/v2/everything?q=india&apiKey={your api key}",
- buisness:"https://newsapi.org/v2/everything?q=buisness&apiKey={your api key}",
- sports:"https://newsapi.org/v2/everything?q=sports&apiKey={your api key}",
- entatainment:"https://newsapi.org/v2/everything?q=entertainment&apiKey={your api key}",
+ tech:"https://newsapi.org/v2/everything?q=tech&apiKey={your api key}"
+
+ health:"https://newsapi.org/v2/everything?q=health&apiKey={your api key}"
+
+ general:"https://newsapi.org/v2/everything?q=india&apiKey={your api key}"
+
+ buisness:"https://newsapi.org/v2/everything?q=buisness&apiKey={your api key}"
+
+ sports:"https://newsapi.org/v2/everything?q=sports&apiKey={your api key}"
+
+ entatainment:"https://newsapi.org/v2/everything?q=entertainment&apiKey={your api key}"
+
 
  `
 
