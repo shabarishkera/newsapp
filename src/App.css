@@ -38,37 +38,14 @@
 }
 .footer
 {
-/*animation-name: myanime;  */
-animation-duration: 6s;
-animation-delay: 0s;
-animation-timing-function:ease-in-out;
-animation-iteration-count: infinite;
 padding:1.2rem;
-transition:  border ease-in-out 1s 2s;
 border-radius: .5rem;
-
 background-color: lightgray;
 display: flex;
 flex-direction: row;
 justify-content: center;
 align-items: center;
 border: 3px darkgrey inset solid;
-}
-@keyframes myanime {
-  0%{border: black solid;
-  
-  }
-  10%{border: black solid}
-  30%{border:  blue solid}
-  60%{border: orange solid}
-  80%{border: red solid}
-  90%{border: yellow solid}
-  100%{border: black solid}
-
-}
-.spinner
-{
-
 }
 
 .container-assist

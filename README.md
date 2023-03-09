@@ -31,7 +31,7 @@ Your app is ready to be deployed!
  `API KEY IS HIDDEN -- TO RUN USE YOUR OWN API KEY `-
 
  url format 
- 
+
  `
  tech:"https://newsapi.org/v2/everything?q=tech&apiKey={your api key}"
 
@@ -52,4 +52,4 @@ Your app is ready to be deployed!
 ## some screenshots 
 ![PREVIEW](public/preview2.png)
 ![PREVIEW](public/preview2.png)
-![PREVIEW](/public/preview4.png)
+![PREVIEW](public/preview4.png)
