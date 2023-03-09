@@ -1,6 +1,7 @@
-import React, { Component, forwardRef } from 'react'
+import React, { Component } from 'react'
 import Newsitem from './newsitem';
-import Spinner from './spinner'
+
+import ArchiveEmpty from './ArchiveEmpty';
 export default class Archive extends Component {
     constructor ()
     {
@@ -12,7 +13,7 @@ export default class Archive extends Component {
     }
     componentDidMount()
     {
-      var values=[];var i;
+      var values=[];
         for( let key=0 ;key<sessionStorage.length;key++)
         {   
             values.push(JSON.parse(sessionStorage.getItem(key)));
@@ -32,15 +33,13 @@ export default class Archive extends Component {
     }
   render() {
     return (
-      <div>
-        <div className="alert alert-primary" role="alert" onClick={(elem)=>{window.sessionStorage.clear();
-        
-      //issue not updating after clearing the sessionStrorage..
-        }}>
-    clear archived news
+     <div>
+       
 
-</div>
-{!window.sessionStorage.length?<Spinner />:null}
+
+
+<button type="button"  id="clearsession"className="btn btn-warning" onClick={(elem)=>{window.sessionStorage.clear(); window.location.reload()}}>clear Achived</button>
+{!window.sessionStorage.length?<ArchiveEmpty />:null}
          <div className='row'>
           {this.state.articles.map((element)=>{
            return <div  key={element.newsurl} className='col-md-3'>

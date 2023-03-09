@@ -3,8 +3,6 @@ import Newsitem from './newsitem';
 import defaultimage from '../defualtimage.png';
  import Spinner  from './spinner';
 export default class news extends Component {
-
-
    defaulturl=defaultimage;
   constructor(props)
   {
@@ -87,11 +85,13 @@ export default class news extends Component {
         
         </div>
         <hr/>
-        <div className="d-flex justify-content-center footer">.
+        <div className="d-flex justify-content-center footer ">.
         <button type="button" align="left" disabled={this.state.page<=1} className="btn btn-primary " onClick={this.handleprev}> &larr; previous </button>
         <button type="button"  align="right" className="btn btn-primary mx-4 " onClick={this.movetop}>back to top</button>
         <button type="button" id="nextbtn" align="right" className="btn btn-primary " onClick={this.handlenext}>next &rarr; </button>
-
+        { // previous and next button are not same.they dono behave well in a mobile enbvironmenm
+          //fix that issue
+        }
         
         </div>
 
